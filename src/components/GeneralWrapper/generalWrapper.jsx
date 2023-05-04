@@ -19,18 +19,28 @@ export function TodoList() {
     }
   };
 
+  const deleteAll = () =>{
+    setTodos([]);
+  }
+
   const handleDeleteTodo = (index) => {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
 
+  const shouldShowDeleteAllButton = todos.length > 0;
+
   return (
     <div className={styles.title}>
       <h1>To do List</h1>
       <TodoForm onSubmit={handleFormSubmit} value={inputValue} onChange={handleInputChange} />
       <TodoItems todos={todos} onDelete={handleDeleteTodo} />
+      {shouldShowDeleteAllButton && <button onClick={deleteAll} className={styles.deleteAll}>
+        Borrar todo
+      </button>}
     </div>
+    
   );
 }
 
@@ -45,6 +55,7 @@ function TodoForm({ onSubmit, value, onChange }) {
 }
 
 function TodoItems({ todos, onDelete }) {
+
   
   return (
     <ul className={styles.lista}>
@@ -52,6 +63,7 @@ function TodoItems({ todos, onDelete }) {
         <TodoItem key={index} index={index} todo={todo} onDelete={onDelete} />
       ))}
     </ul>
+      
   );
 }
 
@@ -72,7 +84,6 @@ function TodoItem({ index, todo, onDelete }) {
           <BsCheckSquareFill size={20}/>
         </button>
       </div>
-      
     </li>
   );
 }

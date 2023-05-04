@@ -92,3 +92,13 @@
   background: none;
   color: #808080;
 }
+
+.deleteAll{
+  padding: 1rem;
+  color: #ffffff;
+  background-color: #1E6F9F;
+  border-radius: 7px;
+  font-weight: 600;
+  border: none;
+
+}
