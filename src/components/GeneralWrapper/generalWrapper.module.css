@@ -1,0 +1,94 @@
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title h1{
+  color: #00f1dd;
+}
+
+.nuevaTarea{
+  height: 54px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  gap: 8px;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nuevaTarea input {
+  height: 100%;
+  flex: 1;
+  color: #fff;
+  background: #262626;
+  border: 1px solid #0D0D0D;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.nuevaTarea input::placeholder {
+  color: #808080;
+}
+
+.nuevaTarea button {
+  height: 100%;
+  padding: 0 16px;
+  background: #1E6F9F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+.lista{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.tarea{
+  max-width: 550px;
+  width: 100%;
+  background: #262626;
+  border: 1px solid #333333;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn{
+  gap: 12px;
+  display: flex;
+
+}
+
+.checkBtn{
+  color: greenyellow;
+  background: none;
+  border: none;
+}
+
+.deleteBtn{
+  border: none;
+  background: none;
+  color: #808080;
+}
